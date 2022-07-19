@@ -22,7 +22,7 @@ Help()
 
 mount_boot_partition()
 {
-   sector_start=$(fdisk -lu $RAW_IMAGE | grep "Linux extended boot" | awk '{print $2}')
+   sector_start=$(fdisk -lu $RAW_IMAGE | grep "EFI" | awk '{print $2}')
 
    mkdir -p $mount_path
 

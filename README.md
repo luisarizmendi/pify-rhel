@@ -15,6 +15,8 @@ Let's say that, for example, you created a RHEL for Edge RAW image...maybe using
 ./pify-rhel.sh -i <raw image name>
 ``` 
 
+> NOTE: You need to execute the script with enough privileges to mount the image in /dev/loop, otherwise it will fail.
+
 It will mount your image, copy the files, and unmount it. That's it.
 
 > NOTE: "You modify the RAW image, it does not make a copy, so take this into account if you want to keep your original file"
