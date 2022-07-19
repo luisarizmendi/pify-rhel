@@ -41,7 +41,7 @@ copy_pftf_files()
 
 
 
-function main() {
+
 
    # Set defaults
    RAW_IMAGE=""
@@ -51,7 +51,7 @@ function main() {
 
 
    # Override defaults with command-line options
-   while getopts 'i:' OPTION
+   while getopts ':i:' OPTION
    do
       case "$OPTION" in
          i)
@@ -83,8 +83,6 @@ function main() {
    copy_pftf_files
    umount $mount_path
    exit 0
-}
 
-main
 
 
