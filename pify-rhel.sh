@@ -24,8 +24,6 @@ mount_boot_partition()
 {
    sector_start=$(fdisk -lu $RAW_IMAGE | grep "Linux extended boot" | awk '{print $2}')
 
-   echo "$((${sector_start} * ${sector_size}))"
-
    mkdir -p $mount_path
 
    mount -o rw,loop,offset=$((${sector_start} * ${sector_size})) $RAW_IMAGE $mount_path
@@ -82,6 +80,16 @@ copy_pftf_files()
    mount_boot_partition
    copy_pftf_files
    umount $mount_path
+
+
+   echo "*********************************************************************************************"
+   echo "DONE! Files were injected into your RAW image"
+   echo ""
+   echo "Flash the RAW image into the SD Card and enjoy!"
+   echo "*********************************************************************************************"
+   echo ""
+   echo "" 
+
    exit 0
 
 
