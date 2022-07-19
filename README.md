@@ -24,7 +24,9 @@ It will mount your image, copy the files, and unmount it. That's it.
 > NOTE: If you use the the Raspberry Pi imager you will need to change the file extension from `.raw` to `.img`.
 
 
-Then you can use that RAW image to flash your SD card. Depending on the I/O speed of your SD card/USB, the boot process could take sometime. Also bear in mind that you will get the following message the first time that you boot your system:
+Then you can use that RAW image to flash your SD card. Depending on the I/O speed of your SD card/USB, the boot process could take sometime, be patient while the screen shows a raspberry, it is actually booting...
+
+Also bear in mind that you will get the following message the first time that you boot your system:
 
 <p align="center">  <img src="doc/boot.png" alt="Boot message"/></p>
 
