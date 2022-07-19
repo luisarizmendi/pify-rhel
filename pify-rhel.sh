@@ -28,12 +28,30 @@ mount_boot_partition()
 
    mount -o rw,loop,offset=$((${sector_start} * ${sector_size})) $RAW_IMAGE $mount_path
 
+   if [ $? -ne 0 ]; then
+
+      echo "*********************************************************************************************"
+      echo "ERROR: You cannot mount the file $RAW_IMAGE in $mount_path"
+      echo "*********************************************************************************************"
+      echo ""
+      echo "" 
+      exit -1
+   fi
+
 }
 
 copy_pftf_files()
 {
    cp ${files_location}/*.* ${mount_path}/
+   if [ $? -ne 0 ]; then
 
+      echo "*********************************************************************************************"
+      echo "ERROR: You copy files from ${files_location} to $mount_path"
+      echo "*********************************************************************************************"
+      echo ""
+      echo "" 
+      exit -1
+   fi
 }
 
 
