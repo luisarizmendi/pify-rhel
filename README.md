@@ -21,6 +21,12 @@ It will mount your image, copy the files, and unmount it. That's it.
 
 > NOTE: "You modify the RAW image, it does not make a copy, so take this into account if you want to keep your original file"
 
-Then you can use that RAW image to flash your SD card and enjoy your RHEL running on your Raspberry Pi 4.
-
 > NOTE: If you use the the Raspberry Pi imager you will need to change the file extension from `.raw` to `.img`.
+
+
+Then you can use that RAW image to flash your SD card. Depending on the I/O speed of your SD card/USB, the boot process could take sometime. Also bear in mind that you will get the following message the first time that you boot your system:
+
+<p align="center">  <img src="doc/boot.png" alt="Boot message"/></p>
+
+
+Enjoy your RHEL running on your Raspberry Pi 4!
