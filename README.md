@@ -19,3 +19,4 @@ It will mount your image, copy the files, and unmount it. That's it.
 
 > NOTE: "You modify the RAW image, it does not make a copy, so take this into account if you want to keep your original file"
 
+Then you can use that RAW image to flash your SD card and enjoy your RHEL running on your Raspberry Pi 4.
